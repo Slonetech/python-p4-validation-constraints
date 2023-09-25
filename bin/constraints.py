@@ -14,7 +14,7 @@ class Patient(base):
     __tablename__ = 'patient'
     name = Column(String(length=50), primary_key=True)
     birth_year = Column(Integer,
-                        CheckConstraint('birth_year < 2023'),
+                         CheckConstraint('birth_year < 2023'),
                         nullable=False)
     death_year = Column(Integer)
         # Constraint defined at the Table level
