@@ -17,6 +17,8 @@ class Patient(base):
                         CheckConstraint('birth_year < 2023'),
                         nullable=False)
     death_year = Column(Integer)
+        # Constraint defined at the Table level
+
     __table_args__ = (
         CheckConstraint('(death_year is NULL) or (death_year >= birth_year)'),
     )
